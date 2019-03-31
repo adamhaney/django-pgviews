@@ -50,7 +50,7 @@ class ViewSyncer(object):
                 continue # Skip
 
             try:
-                if has_attr(view_cls, 'generate_sql'):
+                if hasattr(view_cls, 'generate_sql'):
                     view_sql = view_cls.generate_sql()
                 else:
                     view_sql = view_cls.sql
